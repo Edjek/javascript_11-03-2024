@@ -29,34 +29,38 @@ if (condition < 18) {
     console.log('Tu es trop vieux pour moi');
 }
 
-// const animal = prompt('Quel est votre animal préféré?');
+// Les opérateurs logiques OU (||) et ET (&&)
+const animal = prompt('Quel est votre animal préféré?');
 
-// // Les opérateurs logiques OU (||) et ET (&&)
-// if (animal === 'chien' && condition >= 18) {
-//     console.log("Vous êtes quelqu'un de bien");
-// } else if (animal === 'chat' || animal === 'félin') {
-//     // ou les félin
-//     console.log("Quelle drole d'idée");
-// } else if (animal === 'poisson rouge') {
-//     console.log('Je ne veux plus parler avec toi');
-// } else {
-//     console.log("Je n'ai pas compris la reponse");
-// }
+if (animal === 'chien' && condition >= 18) {
+    console.log("Vous êtes quelqu'un de bien");
+} else if (animal === 'chat' || animal === 'félin') {
+    console.log("Quelle drole d'idée");
+} else if (animal === 'poisson rouge') {
+    console.log('Je ne veux plus parler avec toi');
+} else {
+    console.log("Je n'ai pas compris la reponse");
+}
 
 // FizzBuzz Game
-// let userInput = prompt('Donnez moi un nombre');
+let userInput = prompt('Donnez moi un nombre');
 
-// if (userInput % 5 === 0 && userInput % 3 === 0) {
-//     console.log('Fizzbuzz');
-// } else if (userInput % 3 === 0) {
-//     console.log('Buzz');
-// } else if (userInput % 5 === 0) {
-//     console.log('Fizz');
-// } else {
-//     console.log('ce nombre ne m\'interesse pas');
-// }
+if (userInput % 5 === 0 && userInput % 3 === 0) {
+    console.log('Fizzbuzz');
+} else if (userInput % 3 === 0) {
+    console.log('Buzz');
+} else if (userInput % 5 === 0) {
+    console.log('Fizz');
+} else {
+    console.log("ce nombre ne m'interesse pas");
+}
 
-// Ecrire un algorithme qui demande à l'utilisateur son age. Il indique ensuite à l'utilisateur quel film il peut aller voir.
-// "Action Man" si moins de 13 ans
-// "Matrix" si il a entre 13 et 18 ans
-// "Evil Dead" si plus de 18 ans
+const userAge = prompt('Quel est ton age?');
+
+if (age < 13) {
+    console.log('Tu peux voir Action Man');
+} else if (age >= 13 && age <= 18) {
+    console.log('Tu peux voir Matrix');
+} else {
+    console.log('Tu peux voir Evil Dead');
+}

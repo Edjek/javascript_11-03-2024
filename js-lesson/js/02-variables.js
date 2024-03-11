@@ -25,6 +25,7 @@ console.log(uneVariable);
 // Les deux peuvent se faire en même temps
 let greetingMessage = 'Hello, world';
 console.log(greetingMessage);
+
 greetingMessage = 'Je suis un nouveau message';
 console.log(greetingMessage);
 
