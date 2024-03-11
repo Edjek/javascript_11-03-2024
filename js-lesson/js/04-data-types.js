@@ -10,7 +10,7 @@ const positiveInteger = 89; // Positive Integer
 const negativeInteger = -10; // Negative Integer
 const decimalNumber = 56.9; // Decimal Number
 const infini = 1 / 0; // Infinity
-const notANumber = 'fhtfh' / 4; // NaN
+const notANumber = 'message' / 4; // NaN
 
 // BOOLEAN (booléens)
 // Variable de type booleen, n'accepte que 2 valeurs TRUE ou FALSE

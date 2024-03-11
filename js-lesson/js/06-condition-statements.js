@@ -4,9 +4,12 @@
 
 const condition = 17;
 
-// Le type booléen correspond à la valeur renvoyée lorsque l'on effectue un test sur des variables
-// Si la condition est vraie (thruthy), le bloc d'instruction est executé
-// Si la condition est fausse (falsy), le bloc d'instruction est ignoré (0 et '' sont considérés comme falsy)
+/*
+    Le type booléen correspond à la valeur renvoyée lorsque l'on effectue un test sur des variables
+    Si la condition est vraie (truthy), le bloc d'instruction est executé
+    Si la condition est fausse (falsy), le bloc d'instruction est ignoré (0 et '' sont considérés comme falsy)
+*/
+
 if (condition != 18) {
     console.log('Vous êtes majeur');
 }

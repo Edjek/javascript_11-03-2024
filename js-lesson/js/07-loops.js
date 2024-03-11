@@ -1,11 +1,11 @@
 /* --------------------------- LOOPS --------------------------- */
 
-// Les boucles sont des structures permettant d'executer plusieurs fois des instructions
+// Une boucle est une structure de controle qui permet de repeter plusieurs fois des instructions
 
-// Une boucle a besoin de 3 informations principales:
-// initialisation
-// condition
-// incrementation
+// Une boucle est composée de 3 parties :
+// Initialisation
+// Condition
+// Incrementation
 
 // Boucle : while(){...} (tant que)
 let i = 0;
@@ -15,10 +15,10 @@ while (i < 10) {
     i = i + 1;
 }
 
-i = 0;
+let j = 0;
 
-while (i < 10) {
-    // let res = i * 8;
-    console.log(`${i} x 8 = ${i * 8}`);
-    i = i + 1;
+while (j < 10) {
+    // let res = j * 8;
+    console.log(`${j} x 8 = ${j * 8}`);
+    j = j + 1;
 }
