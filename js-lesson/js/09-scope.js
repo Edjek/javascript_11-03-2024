@@ -27,4 +27,4 @@ function scopeWithReturn() {
     let x = 10;
     return x;
 }
-const result = scopeWithReturn(12);
+const result = scopeWithReturn();
