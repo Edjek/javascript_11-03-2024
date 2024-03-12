@@ -1,21 +1,21 @@
 /* --------------------------- FUNCTIONS --------------------------- */
 
 /*
-    Un fonction est bloc de code réutilisable
+    ? Un fonction est bloc de code réutilisable
     qui pourra être appelé à partir d'autres parties de votre code pour effectuer une tâche spécifique.
     Les fonctions sont un moyen utile de segmenter votre code en tâches plus petites plus facile à maintenir.
     Elles permettent de réutiliser le même code plusieurs fois sans avoir à le copier coller
 */
 
-// Déclaration de fonction
+// * Déclaration de fonction
 function greeting() {
     console.log('Hello, ');
 }
 
-// Appelle de la fonction (une fonction n'est executé que lorsqu'elle est appelé)
+// * Appelle de la fonction (une fonction n'est executé que lorsqu'elle est appelé)
 greeting();
 
-// Une fonction peut prendre parametre
+// Une fonction peut prendre des parametres
 function addition(x, y) {
     const result = x + y;
     console.log(`Le resultat de l'addition est ${result}`);
@@ -30,7 +30,7 @@ function displayGreetintWithParameter(firstName) {
 displayGreetintWithParameter('rachid');
 displayGreetintWithParameter('sofiane');
 
-// Multiplication table
+// Multiplication table de 9
 function displayMultplicationTableofNine() {
     for (let i = 0; i < 10; i++) {
         console.log(`${i} x 9 = ${i * 9}`);
@@ -38,6 +38,7 @@ function displayMultplicationTableofNine() {
 }
 // displayMultplicationTableofNine();
 
+// Exercice : Ecrire une fonction qui affiche la table de multiplication d'un nombre donné
 function displayMultplicationTable(x) {
     for (let i = 0; i < 10; i++) {
         console.log(`${i} x ${x} = ${i * x}`);
@@ -45,6 +46,7 @@ function displayMultplicationTable(x) {
 }
 // displayMultplicationTable(11, 76);
 
+// Exercice : Ecrire une fonction qui affiche la table de multiplication d'un nombre donné jusqu'à un certain nombre
 function displayMultplicationTableWithTwoParameters(x, y) {
     for (let i = 0; i < y; i++) {
         console.log(`${i} x ${x} = ${i * x}`);
@@ -52,7 +54,7 @@ function displayMultplicationTableWithTwoParameters(x, y) {
 }
 // displayMultplicationTableWithTwoParameters(11, 76);
 
-// CheckEvenOdd Game
+// Exercice : CheckEvenOdd Game
 const userInput = prompt('Donne moi un nombre');
 
 function checkEvenOdd(x) {
@@ -68,7 +70,7 @@ function checkEvenOdd(x) {
 let resultat = checkEvenOdd(userInput);
 console.log(resultat);
 
-// FizzBuzz Challenge
+// Exercice : FizzBuzz Challenge
 userInput = prompt('Donne moi un nombre');
 
 function fizzBuzzCheck(x) {

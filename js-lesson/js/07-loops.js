@@ -1,11 +1,19 @@
 /* --------------------------- LOOPS --------------------------- */
 
-// Une boucle est une structure de controle qui permet de repeter plusieurs fois des instructions
+// ? Les boucles sont des structures permettant d'executer plusieurs fois des instructions
 
-// Une boucle est composée de 3 parties :
-// Initialisation
-// Condition
-// Incrementation
+/*
+    la principale difference entre `for` et `while` :
+    `for` est généralement utilisé lorsque le nombre d'itérations est connu à l'avance
+    `while` est utilisé lorsque le nombre d'itérations est inconnu à l'avance et dépend d'une condition spécifique
+*/
+
+/*
+    Une boucle est composée de 3 parties :
+    - Initialisation
+    - Condition
+    - Incrementation
+*/
 
 // Boucle : while(){...} (tant que)
 let i = 0;
@@ -15,6 +23,7 @@ while (i < 10) {
     i = i + 1;
 }
 
+// Exercice : Afficher la table de multiplication de 9
 let j = 0;
 
 while (j < 10) {
@@ -24,6 +33,7 @@ while (j < 10) {
 }
 
 /*
+    Exercice :
     La population de la ville Marrakech est de 1, 000, 000 d’habitants et elle augmente de 50, 000 habitants par an.
     Celle de la ville Agadir est de 500, 000 habitants et elle augmente de 8% par an.
     Ecrire un algorithme permettant de déterminer dans combien d’années la population de la ville Agadir dépassera celle de la ville Marrakech.
@@ -42,24 +52,25 @@ while (agadir < marrakech) {
     // marrakech +=  50000;
     // agadir *= 1.08;
     // k++
-
-    // SUCRE SYNTAXIQUE
-    // k++ on ne peut avancer que de 1 en 1 avec cette façon
-    // La nouvelle valeur est égale à l'ancienne plus le calcul atttribué
-    // k += 1;
-    // k *= 3;
 }
 
 console.log(
     `Il faudra ${i} années avant que la population d'agadir dépasse celle de Marrakech`
 );
 
+/*
+    SUCRE SYNTAXIQUE
+    k++ on ne peut avancer que de 1 en 1 avec cette façon
+    La nouvelle valeur est égale à l'ancienne plus le calcul atttribué
+    k += 1;
+    k *= 3;
+*/
+
 // Boucle : for(){...} (pour)
 for (let i = 0; i < 10; i++) {
     console.log(`${i} x 9 = ${i * 9}`);
 }
 
-// Boucle :
 let l = 20;
 
 do {

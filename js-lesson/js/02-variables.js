@@ -1,7 +1,7 @@
 /* --------------------------- VARIABLES --------------------------- */
 
 /*
-    Une variable est un espace mémoire nommé qui permet de stocker une valeur
+    ? Une variable est un espace mémoire nommé qui permet de stocker une valeur
     Une variable est un conteneur pour stocker des données
     Une variable est un nom qui fait référence à une valeur
 */
@@ -17,7 +17,7 @@
 */
 
 /*
-    camelCase (JAVASCRIPT)
+    * camelCase (JAVASCRIPT)
     kebab-case
     PascalCase
     snake_case

@@ -3,7 +3,7 @@
 // ? La portée des variables (scope) correspond à la portion de code dans laquelle une variables est accessible
 
 /*
-    PORTEE GLOBAL
+    * PORTEE GLOBAL
     Une variable déclarée en dehors de toute fonction ou bloc a une portée globale.
     Cela signifie qu'elle peut être utilsée et modifiée dans n'importe que'elle partie du code, y compris à l'intérieur de fonction ou de bloc
 */
@@ -11,7 +11,7 @@
 const globale = 'Je suis une variable globale';
 
 /*
-    PORTEE LOCALE
+    * PORTEE LOCALE
     La portée d'une variable déclarée à l'intérieur d'une fonction ou d'un bloc est limitée à cette fonction ou ce bloc.
     Cela signifie que la variable ne sera pas accessible en dehors de cette fonction.
 */

@@ -1,11 +1,11 @@
 /* --------------------------- CONDITIONAL STATEMENTS --------------------------- */
 
-// Les opérateurs de comparaison (==, !=, >, >=, <, <=, ===, !==)
+// ? Les opérateurs de comparaison (==, !=, >, >=, <, <=, ===, !==)
 
 const condition = 17;
 
 /*
-    Le type booléen correspond à la valeur renvoyée lorsque l'on effectue un test sur des variables
+    * Le type booléen (true ou false) correspond à la valeur renvoyée lorsque l'on effectue un test sur des variables
     Si la condition est vraie (truthy), le bloc d'instruction est executé
     Si la condition est fausse (falsy), le bloc d'instruction est ignoré (0 et '' sont considérés comme falsy)
 */
@@ -32,7 +32,7 @@ if (condition < 18) {
     console.log('Tu es trop vieux pour moi');
 }
 
-// Les opérateurs logiques OU (||) et ET (&&)
+// * Les opérateurs logiques OU (||) et ET (&&)
 const animal = prompt('Quel est votre animal préféré?');
 
 if (animal === 'chien' && condition >= 18) {
@@ -68,9 +68,10 @@ if (userAge < 13) {
     console.log('Tu peux voir Evil Dead');
 }
 
+// ? L’instruction switch représente une alternative à l’utilisation d’un if…else if…else
+// * Elle permet de tester une variable et de lui faire exécuter différentes actions selon les valeurs qu’elle peut prendre
+
 // switch(){...}
-// Switch permet de verifier uniquement sur une seule valeur les égalités
-// Cela permet parfois d'être plus lisible mais son usage limité
 let age = 18;
 
 switch (age) {
@@ -81,12 +82,17 @@ switch (age) {
         console.log('Vous avez 5 ans');
         break;
     case 10:
-        console.log('Voua avez 10 ans');
+        console.log('Vous avez 10 ans');
         break;
     default:
         console.log('Je ne connais pas votre age');
 }
 
+/*
+    Exercice 1 :
+    Demander à l'utilisateur son animal préféré
+    Et afficher un message en fonction de sa réponse (chien, chat, poisson rouge) avec un switch
+*/
 const newAnimal = prompt('Quel est votre animal préféré ?');
 
 switch (newAnimal) {
