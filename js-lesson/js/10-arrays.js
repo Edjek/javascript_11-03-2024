@@ -6,7 +6,7 @@
 */
 
 // Déclaration d'un tableau vide
-const array = [];
+const emptyArray = [];
 
 const fruits = ['pomme', 'banane', 'orange'];
 // On peut accéder à un élément du tableau en utilisant son index numérique.
@@ -38,11 +38,25 @@ const monthsInFrench = [
     'decembre',
 ];
 // Affichez janvier et decembre
-console.log(monthsInFrench[0], monthsInFrench[11]);
+// console.log(monthsInFrench[0], monthsInFrench[11]);
 
 // boucle for qui fait 3 tours
-for (let i = 0; i < 3; i++) {
-    console.log(fruits[i]);
+for (let i = 0; i < fruits.length; i++) {
+    // console.log(fruits[i]);
 }
 
 // afficher tous les mois de l'année
+for (let i = 0; i < monthsInFrench.length; i++) {
+    // console.log(monthsInFrench[i]);
+}
+
+// creer une fonction displayArray
+    // Afficher tous les mois de l'année
+function displayArray(array){
+    for (let i = 0; i < monthsInFrench.length; i++) {
+        console.log(monthsInFrench[i]);
+    }
+}
+
+displayArray()
+displayArray()
