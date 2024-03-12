@@ -16,15 +16,15 @@ const globale = 'Je suis une variable globale';
     Cela signifie que la variable ne sera pas accessible en dehors de cette fonction.
 */
 
-function scope(){
-    let x = 10
+function scope() {
+    let x = 10;
 }
 console.log(x); // Génère une erreur : x n'est pas défini dans le scope global
 
 // Pour que le resultat d'une fonction soit accessible à l'exterieur, il faut qu'elle retourne une valeur avec le mot clé `return`
 // Et il faudra donc récupérer le retour de la fonction dans une variable
-function scopeWithReturn(){
-    let x = 10
-    return x
+function scopeWithReturn() {
+    let x = 10;
+    return x;
 }
-const result = scopeWithReturn(12)
+const result = scopeWithReturn(12);
