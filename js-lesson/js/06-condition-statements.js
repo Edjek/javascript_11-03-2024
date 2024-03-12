@@ -60,10 +60,45 @@ if (userInput % 5 === 0 && userInput % 3 === 0) {
 
 const userAge = prompt('Quel est ton age?');
 
-if (age < 13) {
+if (userAge < 13) {
     console.log('Tu peux voir Action Man');
-} else if (age >= 13 && age <= 18) {
+} else if (userAge >= 13 && userAge <= 18) {
     console.log('Tu peux voir Matrix');
 } else {
     console.log('Tu peux voir Evil Dead');
+}
+
+// switch(){...}
+// Switch permet de verifier uniquement sur une seule valeur les égalités
+// Cela permet parfois d'être plus lisible mais son usage limité
+let age = 18;
+
+switch (age) {
+    case 18:
+        console.log('Vous avez 18 ans');
+        break;
+    case 5:
+        console.log('Vous avez 5 ans');
+        break;
+    case 10:
+        console.log('Voua avez 10 ans');
+        break;
+    default:
+        console.log('Je ne connais pas votre age');
+}
+
+const newAnimal = prompt('Quel est votre animal préféré ?');
+
+switch (newAnimal) {
+    case 'chien':
+        console.log("Vous etes qq'un de bien");
+        break;
+    case 'chat':
+        console.log("Quelle drole d'idée");
+        break;
+    case 'poisson rouge':
+        console.log('Je ne veux plus parler avec toi');
+        break;
+    default:
+        console.log('pas compris');
 }
