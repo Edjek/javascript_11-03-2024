@@ -38,8 +38,11 @@ const monthsInFrench = [
     'decembre',
 ];
 // Affichez janvier et decembre
-console.log(monthsInFrench);
+console.log(monthsInFrench[0], monthsInFrench[11]);
 
 // boucle for qui fait 3 tours
+for (let i = 0; i < 3; i++) {
+    console.log(fruits[i]);
+}
 
-
+// afficher tous les mois de l'année
