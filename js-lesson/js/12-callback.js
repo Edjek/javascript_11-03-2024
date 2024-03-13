@@ -1,9 +1,9 @@
 /* --------------------------- CALLBACK --------------------------- */
 
 /*
-    Une fonction callback est une fonction passée en argument à une autre fonction.
-    La fonction qui reçoit la fonction callback en argument, l'appelle à un moment donné dans son code.
+    ? Une fonction callback est une fonction passée en argument à une autre fonction.
     La fonction callback est appelée à l'intérieur de la fonction qui la reçoit en argument.
+    Elle permet de déléguer une partie du travail à une autre fonction.
 */
 
 // Exemple de fonction callback
@@ -12,7 +12,7 @@ const addition = function (x, y) {
 };
 
 // La fonction mathematique prend en parametre deux nombres et une fonction callback
-// Elle appelle et retourne le resultat de la fonction addition
+// * Elle appelle et retourne le resultat de la fonction addition
 function mathematique(x, y, callback) {
     return callback(x, y);
 }

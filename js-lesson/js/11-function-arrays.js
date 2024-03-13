@@ -54,6 +54,8 @@ let vegetables = ['patate douce', 'carotte', 'celeri', 'tomate'];
 const food = fruits.concat(vegetables);
 // console.log(food);
 
+/* --------------------------- ARRAY ITERATION --------------------------- */
+
 // ? Boucle `for(){}` permet de parcourir les éléments d'un tableau (itérable)
 for (let i = 0; i < fruits.length; i++) {
     // console.log(fruits[i]);
@@ -73,11 +75,12 @@ fruits.forEach(function (fruit) {
     // console.log(fruit);
 });
 
-vegetables.forEach(function (x) {
-    console.log(x);
+vegetables.forEach(function (vegetable) {
+    console.log(vegetable);
 });
 
-// Exercice :
+/* --------------------------- EXERCICES --------------------------- */
+
 const capitalCities = [
     'Paris',
     'Berlin',

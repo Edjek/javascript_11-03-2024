@@ -40,7 +40,6 @@ const monthsInFrench = [
     'novembre',
     'decembre',
 ];
-// Affichez janvier et decembre
 // console.log(monthsInFrench[0], monthsInFrench[11]);
 
 for (let i = 0; i < fruits.length; i++) {
@@ -51,8 +50,9 @@ for (let i = 0; i < monthsInFrench.length; i++) {
     // console.log(monthsInFrench[i]);
 }
 
-// creer une fonction displayArray
-// Afficher tous les mois de l'année
+/* --------------------------- EXERCICES --------------------------- */
+
+// Ecrire une fonction qui prend en parametre un tableau et qui affiche chaque element
 function displayArray(array) {
     for (let i = 0; i < array.length; i++) {
         console.log(array[i]);
@@ -62,6 +62,7 @@ function displayArray(array) {
 // displayArray(fruits);
 // displayArray(monthsInFrench);
 
+// Ecrire une fonction qui prend en parametre un tableau et un nom et qui affiche la moyenne des notes de l'eleve
 const notesCda = [
     ['philippe', 12, 11, 15, 16],
     ['laetitia', 12, 14, 18, 14],
@@ -74,7 +75,6 @@ const notesDw = [
     ['mickael', 9, 10, 18, 20],
 ];
 
-// Regardez dans le tableau si y'a un eleve qui s'appelle philippe, si c'est le cas vous faites la moyenne des notes de philippe
 function studentAverage(array, studentFirstName) {
     for (let i = 0; i < array.length; i++) {
         if (array[i][0] === studentFirstName) {
@@ -89,7 +89,6 @@ function studentAverage(array, studentFirstName) {
     }
 }
 
-// Modifierez la fonction pour qu'elle puisse prendre en parametre un prenom et un tableau
 studentAverage(notesCda, 'gerson');
 studentAverage(notesCda, 'laetitia');
 studentAverage(notesDw, 'lamine');
