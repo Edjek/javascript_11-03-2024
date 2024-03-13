@@ -1,4 +1,4 @@
-/* --------------------------- PRIMITIVE DATA TYPES --------------------------- */
+/* --------------------------- DATA TYPES --------------------------- */
 
 // ? le Javascript type dynamiquement les variables
 
