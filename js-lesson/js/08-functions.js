@@ -73,7 +73,7 @@ console.log(resultat);
 // Exercice : FizzBuzz Challenge
 userInput = prompt('Donne moi un nombre');
 
-function fizzBuzzCheck(x) {
+const fizzBuzzCheck = function (x) {
     let response;
     if (x % 5 === 0 && x % 3 === 0) {
         response = 'Fizzbuzz';
@@ -86,7 +86,23 @@ function fizzBuzzCheck(x) {
     }
 
     return response;
-}
-
+};
 let res = fizzBuzzCheck(userInput);
 console.log(res);
+
+// Il est possible de sauvegarder une fonction dans une variable (fonction anonyme)
+// ? Il s'agit juste d'une autre syntaxe
+const helloUser = function (firstName) {
+    console.log(`Bonjour ${firstName}`);
+};
+helloUser('rachid');
+
+// Arrow function
+const helloUserArrow = (firstName) => {
+    console.log(`Bonjour ${firstName}`);
+};
+
+helloUserArrow('remi');
+
+// Il a pleins de façons plus concise d'écrire des fonctions fléchées
+const arrow = () => a * 2;
