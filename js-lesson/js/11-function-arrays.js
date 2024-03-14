@@ -110,3 +110,21 @@ console.log(returnModifyArrayCapitalCities);
 
         Afficher le resultat
 */
+
+const meteo = (saison, temperature) => {
+    let article = 'en';
+    let degre = 'degrés';
+
+    if (saison === 'printemps') {
+        article = 'au';
+    }
+
+    if (temperature >= -1 && temperature <= 1){
+        degre = 'degré'
+    }
+
+    return `Nous sommes ${article} ${saison} et il fait ${temperature} ${degre}`;
+};
+
+const response = meteo('été', 56);
+console.log(response);

@@ -75,20 +75,34 @@ const notesDw = [
     ['mickael', 9, 10, 18, 20],
 ];
 
-function studentAverage(array, studentFirstName) {
-    for (let i = 0; i < array.length; i++) {
-        if (array[i][0] === studentFirstName) {
-            let moyenne = 0;
+// function studentAverage(array, studentFirstName) {
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i][0] === studentFirstName) {
+//             let moyenne = 0;
 
-            for (let j = 1; j < array[i].length; j++) {
-                moyenne = moyenne + array[i][j];
+//             for (let j = 1; j < array[i].length; j++) {
+//                 moyenne = moyenne + array[i][j];
+//             }
+//             moyenne = moyenne / (array[i].length - 1);
+//             console.log(moyenne);
+//         }
+//     }
+// }
+
+const studentAverage = (array, firstName) => {
+    for (let student of array) {
+        if (student[0] === firstName) {
+            let moyenne = 0;
+            for (let j = 1; j < student.length; j++) {
+                moyenne = moyenne + student[j];
             }
-            moyenne = moyenne / (array[i].length - 1);
-            console.log(moyenne);
+            moyenne = moyenne / (student.length - 1);
+            return moyenne
         }
     }
-}
+};
 
-studentAverage(notesCda, 'gerson');
-studentAverage(notesCda, 'laetitia');
-studentAverage(notesDw, 'lamine');
+const averageLaetitia = studentAverage(notesCda, 'laetitia');
+console.log(averageLaetitia);
+// studentAverage(notesCda, 'laetitia');
+// studentAverage(notesDw, 'lamine');
