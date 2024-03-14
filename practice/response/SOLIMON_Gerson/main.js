@@ -1,5 +1,6 @@
+/* ---------------------------------------------- SOLIMON Gerson -------------------------------------------------*/
 /*
-    VOTRE NOM  ;
+
     Description: Algorithmique Practice
     Language: JavaScript
     Created: 2024-14-013
@@ -30,84 +31,106 @@
 
 // Afficher un message de bienvenue dans la console
 // 'Bonjour, je suis un message affiché dans la console'
-console.log('Bonjour, je suis un message affiché dans la console');
-
 // Creer une variable qui contient un message de bienvenue
 // 'Bonjour, je suis une variable qui contient un message de bienvenue'
 // Afficher le message de bienvenue dans la console
-const welcome =
-    'Bonjour, je suis une variable qui contient un message de bienvenue';
-console.log(welcome);
+
+console.log("Bonjour, je suis un message affiché dans la console");
+
+const welcom =
+  "Bonjour, je suis une variable qui contient un message de bienvenue";
+
+console.log(welcom);
 
 // Creer une variable qui contient votre prenom
 // Afficher la console le message suivant avec la variable qui contient votre prenom
 // 'Bonjour, je m'appelle XXXX'
-const firstName = 'Rachid';
-
+const firstName = "Gerson";
 // Afficher le message avec les 3 facons de faire une concaténation
-console.log("Bonjour, je m'appelle " + firstName);
-console.log("Bonjour, je m'appelle " + firstName);
-console.log(`Bonjour, je m'appelle  ${firstName}`);
 
+console.log("Bonjour,je m'appelle " + firstName);
+console.log("Bonjour,je m'appelle ", firstName);
+console.log(`Bonjour,je m'appelle "+ ${firstName}`);
 // ---------------------------------- Partie 2 ----------------------------------
 
 // Creer une fonction qui affiche un message de bienvenue dans la console
 // 'Bonjour, je suis une fonction qui affiche un message de bienvenue dans la console'
 // Appeler la fonction
 
-// ? 3 syntaxes possibles pour créer une fonction
-function greetintConsole() {
-    console.log(
-        'Bonjour, je suis une fonction qui affiche un message de bienvenue dans la console'
-    );
+function bienvenue() {
+  console.log(
+    "Bonjour, je suis une fonction qui affiche un message de bienvenue dans la console"
+  );
 }
-
-const greetintConsoleAnonyme = function () {
-    console.log(
-        'Bonjour, je suis une fonction qui affiche un message de bienvenue dans la console'
-    );
-};
-
-const greetintConsoleArrow = () => {
-    console.log(
-        'Bonjour, je suis une fonction qui affiche un message de bienvenue dans la console'
-    );
-};
-greetintConsole();
-greetintConsoleAnonyme();
-greetintConsoleArrow;
+bienvenue();
 
 // Creer une fonction qui affiche un message de bienvenue dans la console et qui prend en parametre un nom
-// 'Bonjour XXXX, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend un parametre'
+// 'Bonjour XXXX, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend un parametre`
 // Appeler la fonction en lui passant votre prenom en parametre
-const greetintConsoleWithParameter = (nomDeParametreQueJeChoisi)=>{
-    console.log(`Bonjour ${nomDeParametreQueJeChoisi}, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend un parametre`);
+
+function solimon() {
+  console.log(
+    `Bonjour Gerson, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend un parametre`
+  );
 }
+solimon();
 
-greetintConsoleWithParameter('rachid')
-
+//(gerson)
 // Creer une fonction qui affiche un message de bienvenue dans la console et qui prend en parametre un nom et un age
 // 'Bonjour XXXX, vous avez XXXX ans, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend deux parametres'
 // Appeler la fonction en lui passant votre prenom et votre age en parametre
 
-const greetintConsoleWithTwoParameter = function(firstName, age){
-    console.log(`Bonjour ${firstName}, vous avez ${age} ans, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend deux parametres`);
-}
-greetintConsoleWithTwoParameter('rachid', 40)
+//MlastName(Gerson);
+const monPremierprenom = function (lastName, age) {
+  console.log(
+    `Bonjour ${lastName}, vous avez ${age} ans, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend deux parametres `
+  );
+};
+//monPremierprenom(Gerson, 45);
 
-// ---------------------------------- Partie 3 ----------------------------------
+//------- Partie 3 ----------------------------------
 
 // Déclarer une variable qui contient votre age
 // Si vous avez plus de 18 ans afficher dans la console 'Vous êtes majeur'
 // Sinon afficher dans la console 'Vous êtes mineur'
 
+const age = 45;
+if (age >= 18) {
+  console.log("Vous êtes majeur");
+} else {
+  console.log("Vous êtes mineur");
+}
+
+//let
+//while(let i = 0;i < 18)
+
 // Transformer la fonction pour retourner true si l'utilisateur est majeur et false sinon
+function isMajeur(age) {
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+const response = isMajeur;
+console.log(response);
 
 // Décider de l'animal préféré de l'utilisateur en fonction de son choix
 //     Si il rentre "chat" ou "chien" => "Vous aimez les animaux domestiques !"
 //     Si il rentre "lion" ou "tigre" => "Vous aimez les animaux sauvages !"
 //     Si il rentre "dauphin" ou "otarie" => "Vous aimez les animaux marins !"
 //     Sinon => je ne connais pas cet animal
+
+const animal = "chat";
+if (animal === "chien" || animal === "chat") {
+  return "Vous aimez lez animaaux domestiques";
+} else if (animal === "lion" || animal === "tigre") {
+  return "Vous aimez les animaux sauvage";
+} else if (animal === "dauphin" || animal === "otarie") {
+  return "Vous aimez les animaux marins";
+} else {
+  return "je ne connais pas cet animal";
+}
 
 // Transformer l'exercice en fonction qui prend en parametre un animal et qui retourne le message correspondant
 
@@ -116,18 +139,34 @@ greetintConsoleWithTwoParameter('rachid', 40)
 // ---------------------------------- Partie 4 ----------------------------------
 
 // Faire une boucle qui affiche dans la console les nombres de 1 à 10
+let i = 0;
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
 
 // Demander à l'utilisateur de rentrer un nombre
 // Faire une boucle qui affiche dans la console les nombres de 1 à ce nombre
+let utilisateur = prompt("Rentrer un nombre");
+while (i < 10) {
+  console.log(i);
+  i = i + 1;
+}
 
 // Faire une fonction qui prend en parametre un nombre
 // Et qui affiche dans la console la table de multiplication de ce nombre
+
+for (let i = 0; i < 10; i++) {
+  console.log(`${i} * 9 = ${i * 9}`);
+}
 
 // Algorithme de calcul de moyenne avec tableau
 // Déclarer un tableau qui contient les notes de l'utilisateur [10, 15, 20]
 // Calculer la moyenne de l'utilisateur
 // Afficher dans la console la moyenne de l'utilisateur
 
+const noteUtilisateur = [10, 15, 20];
+let result = (10 + 15 + 20) / 3;
+console.log(result);
 // Déclarer une fonction qui prend en parametre une moyenne et qui retourne la mention de l'utilisateur
 // Si la moyenne est supérieure ou égale à 10 => mention "Très bien"
 // Si la moyenne est supérieure ou égale à 9 => mention "Bien"
@@ -153,6 +192,23 @@ greetintConsoleWithTwoParameter('rachid', 40)
 //     decrire => () => "La voiture est une renault clio rouge de 5 portes et 5 vitesses"
 //     decrireOptions => () => "La voiture est équipée de la climatisation, des vitres electriques, du gps, du bluetooth et des sieges chauffants"
 
+let objectVoiture = [
+  {
+    marqque: "renault",
+    modele: "clio",
+    couleur: "Rouge",
+    nombreDePorte: 5,
+  },
+];
+
+const array = [
+  "climatisation",
+  "Vitre electrique",
+  "gps",
+  "bluetoots",
+  "siege chauffant",
+];
+
 // Afficher dans la console la marque de la voiture
 // Afficher dans la console le modele de la voiture
 // Afficher dans la console la couleur de la voiture
@@ -166,11 +222,16 @@ greetintConsoleWithTwoParameter('rachid', 40)
 // A l'aide d'une boucle for(...of...), afficher dans la console la liste des options de la voiture
 
 // Demander à l'utilisateur de saisir son prénom
-// Demander à l'utilisateur de saisir son nom
-// Demander à l'utilisateur de saisir son age
-// Demander à l'utilisateur de saisir son sexe
-// Demander à l'utilisateur de saisir son animal préféré
+let utilisateur1 = prompt("Saisissez votre prénom");
 
+// Demander à l'utilisateur de saisir son nom
+let utilisateur2 = prompt("Saisissez votre nom");
+// Demander à l'utilisateur de saisir son age
+let utilisateur3 = prompt("Saisissez votre age");
+// Demander à l'utilisateur de saisir son sexe
+let utilisateur4 = prompt("Saisissez votre sexe");
+// Demander à l'utilisateur de saisir son animal préféré
+let utilisateur5 = prompt("Saisissez votre animal préféré");
 // Créer un objet utilisateur
 //     prenom => prenom de l'utilisateur
 //     nom => nom de l'utilisateur
@@ -178,83 +239,103 @@ greetintConsoleWithTwoParameter('rachid', 40)
 //     sexe => sexe de l'utilisateur
 //     animalPrefere => animal préféré de l'utilisateur
 //     description => () => "Je m'appelle XXXX et j'ai XXXX ans et j'aime les XXXXX"
+let objetUtilisateur = [
+  {
+    prenom: "Paul",
+    nom: "Smith",
+    age: 45,
+    sexe: "Masculin",
+    animalprefere: "Chien",
+    description:
+      "Je m'appelle" +
+      prenom +
+      " " +
+      nom +
+      " " +
+      " et jai " +
+      age +
+      " ans " +
+      " j'aime les animaux",
+  },
+];
+console.log(description);
 
 // Afficher dans la console la description de l'utilisateur
 
 // Voici un tableau qui contient 6 objets utilisateurs
 let users = [
-    {
-        prenom: 'Alice',
-        nom: 'Dupont',
-        age: 28,
-        sexe: 'Femme',
-        animauxPreferes: ['chat', 'chien'],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
-                this.age
-            } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
+  {
+    prenom: "Alice",
+    nom: "Dupont",
+    age: 28,
+    sexe: "Femme",
+    animauxPreferes: ["chat", "chien"],
+    description: function () {
+      return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
+        this.age
+      } ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
     },
-    {
-        prenom: 'Bob',
-        nom: 'Martin',
-        age: 35,
-        sexe: 'Homme',
-        animauxPreferes: ['poisson', 'oiseau'],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
-                this.age
-            } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
+  },
+  {
+    prenom: "Bob",
+    nom: "Martin",
+    age: 35,
+    sexe: "Homme",
+    animauxPreferes: ["poisson", "oiseau"],
+    description: function () {
+      return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
+        this.age
+      } ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
     },
-    {
-        prenom: 'Claire',
-        nom: 'Rousseau',
-        age: 42,
-        sexe: 'Femme',
-        animauxPreferes: ['cheval', 'lapin'],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
-                this.age
-            } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
+  },
+  {
+    prenom: "Claire",
+    nom: "Rousseau",
+    age: 42,
+    sexe: "Femme",
+    animauxPreferes: ["cheval", "lapin"],
+    description: function () {
+      return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
+        this.age
+      } ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
     },
-    {
-        prenom: 'David',
-        nom: 'Lefebvre',
-        age: 22,
-        sexe: 'Homme',
-        animauxPreferes: ['chat', 'chien'],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
-                this.age
-            } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
+  },
+  {
+    prenom: "David",
+    nom: "Lefebvre",
+    age: 22,
+    sexe: "Homme",
+    animauxPreferes: ["chat", "chien"],
+    description: function () {
+      return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
+        this.age
+      } ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
     },
-    {
-        prenom: 'Emma',
-        nom: 'Garcia',
-        age: 29,
-        sexe: 'Femme',
-        animauxPreferes: ['chien', 'hamster'],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
-                this.age
-            } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
+  },
+  {
+    prenom: "Emma",
+    nom: "Garcia",
+    age: 29,
+    sexe: "Femme",
+    animauxPreferes: ["chien", "hamster"],
+    description: function () {
+      return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
+        this.age
+      } ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
     },
-    {
-        prenom: 'François',
-        nom: 'Moreau',
-        age: 46,
-        sexe: 'Homme',
-        animauxPreferes: ['chat', 'oiseau'],
-        description: function () {
-            return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
-                this.age
-            } ans et j'aime les ${this.animauxPreferes.join(', ')}.`;
-        },
+  },
+  {
+    prenom: "François",
+    nom: "Moreau",
+    age: 46,
+    sexe: "Homme",
+    animauxPreferes: ["chat", "oiseau"],
+    description: function () {
+      return `Je m'appelle ${this.prenom} ${this.nom} et j'ai ${
+        this.age
+      } ans et j'aime les ${this.animauxPreferes.join(", ")}.`;
     },
+  },
 ];
 
 // Faire une boucle sur le tableau users
@@ -268,96 +349,96 @@ let users = [
 // ---------------------------------- Partie 7 ----------------------------------
 
 const students = [
-    {
-        nom: 'Dupont',
-        prenom: 'Alice',
-        cours: ['Maths', 'Anglais', 'Histoire'],
-        notes: [14, 16, 18],
-    },
-    {
-        nom: 'Martin',
-        prenom: 'Bob',
-        cours: ['Physique', 'Espagnol', 'Géographie'],
-        notes: [12, 13, 15],
-    },
-    {
-        nom: 'Lefebvre',
-        prenom: 'Claire',
-        cours: ['Chimie', 'Allemand', 'SVT'],
-        notes: [9, 10, 11],
-    },
-    {
-        nom: 'Girard',
-        prenom: 'David',
-        cours: ['Français', 'Arts plastiques', 'Philosophie'],
-        notes: [17, 19, 14],
-    },
-    {
-        nom: 'Petit',
-        prenom: 'Emma',
-        cours: ['Latin', 'Musique', 'Sciences économiques'],
-        notes: [16, 11, 12],
-    },
-    {
-        nom: 'Moreau',
-        prenom: 'François',
-        cours: ['Sport', 'Théâtre', 'Informatique'],
-        notes: [11, 13, 15],
-    },
-    {
-        nom: 'Dubois',
-        prenom: 'Marc',
-        cours: ['Géométrie', 'Latin', 'Marketing'],
-        notes: [15, 12, 10],
-    },
-    {
-        nom: 'Garcia',
-        prenom: 'Hugo',
-        cours: ['Littérature', 'Musique', 'Droit'],
-        notes: [14, 17, 18],
-    },
-    {
-        nom: 'Roux',
-        prenom: 'Inès',
-        cours: ['Sociologie', 'Japonais', 'Chimie'],
-        notes: [10, 9, 12],
-    },
-    {
-        nom: 'Berger',
-        prenom: 'Jules',
-        cours: ['Géographie', 'Théâtre', 'Espagnol'],
-        notes: [13, 16, 14],
-    },
-    {
-        nom: 'Moulin',
-        prenom: 'Karine',
-        cours: ["Histoire de l'art", 'Anglais', 'Physique'],
-        notes: [17, 15, 18],
-    },
-    {
-        nom: 'David',
-        prenom: 'Lucie',
-        cours: ['Chinois', 'Marketing', 'SVT'],
-        notes: [12, 11, 9],
-    },
-    {
-        nom: 'Mercier',
-        prenom: 'Marc',
-        cours: ['Philosophie', 'Sport', 'Français'],
-        notes: [18, 13, 16],
-    },
-    {
-        nom: 'Fournier',
-        prenom: 'Nina',
-        cours: ['Informatique', 'Littérature', 'Musique'],
-        notes: [15, 14, 17],
-    },
-    {
-        nom: 'Morel',
-        prenom: 'Olivier',
-        cours: ['Espagnol', 'Chimie', 'Théâtre'],
-        notes: [13, 11, 16],
-    },
+  {
+    nom: "Dupont",
+    prenom: "Alice",
+    cours: ["Maths", "Anglais", "Histoire"],
+    notes: [14, 16, 18],
+  },
+  {
+    nom: "Martin",
+    prenom: "Bob",
+    cours: ["Physique", "Espagnol", "Géographie"],
+    notes: [12, 13, 15],
+  },
+  {
+    nom: "Lefebvre",
+    prenom: "Claire",
+    cours: ["Chimie", "Allemand", "SVT"],
+    notes: [9, 10, 11],
+  },
+  {
+    nom: "Girard",
+    prenom: "David",
+    cours: ["Français", "Arts plastiques", "Philosophie"],
+    notes: [17, 19, 14],
+  },
+  {
+    nom: "Petit",
+    prenom: "Emma",
+    cours: ["Latin", "Musique", "Sciences économiques"],
+    notes: [16, 11, 12],
+  },
+  {
+    nom: "Moreau",
+    prenom: "François",
+    cours: ["Sport", "Théâtre", "Informatique"],
+    notes: [11, 13, 15],
+  },
+  {
+    nom: "Dubois",
+    prenom: "Marc",
+    cours: ["Géométrie", "Latin", "Marketing"],
+    notes: [15, 12, 10],
+  },
+  {
+    nom: "Garcia",
+    prenom: "Hugo",
+    cours: ["Littérature", "Musique", "Droit"],
+    notes: [14, 17, 18],
+  },
+  {
+    nom: "Roux",
+    prenom: "Inès",
+    cours: ["Sociologie", "Japonais", "Chimie"],
+    notes: [10, 9, 12],
+  },
+  {
+    nom: "Berger",
+    prenom: "Jules",
+    cours: ["Géographie", "Théâtre", "Espagnol"],
+    notes: [13, 16, 14],
+  },
+  {
+    nom: "Moulin",
+    prenom: "Karine",
+    cours: ["Histoire de l'art", "Anglais", "Physique"],
+    notes: [17, 15, 18],
+  },
+  {
+    nom: "David",
+    prenom: "Lucie",
+    cours: ["Chinois", "Marketing", "SVT"],
+    notes: [12, 11, 9],
+  },
+  {
+    nom: "Mercier",
+    prenom: "Marc",
+    cours: ["Philosophie", "Sport", "Français"],
+    notes: [18, 13, 16],
+  },
+  {
+    nom: "Fournier",
+    prenom: "Nina",
+    cours: ["Informatique", "Littérature", "Musique"],
+    notes: [15, 14, 17],
+  },
+  {
+    nom: "Morel",
+    prenom: "Olivier",
+    cours: ["Espagnol", "Chimie", "Théâtre"],
+    notes: [13, 11, 16],
+  },
 ];
 
 // Itérer sur le tableau students avec la méthode forEach()
