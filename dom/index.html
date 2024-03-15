@@ -10,26 +10,24 @@
     <body>
         <h1>la manipulation du DOM en Javascript</h1>
         <h2>Quelques propriétés CSS</h2>
-        <h2>Pas facile le Javascript</h2>
-        <div>
+        <h2 id="delete">Pas facile le Javascript</h2>
+        <div id="main-paragraphe">
             <h2 class="paragraphe">Les paragraphes</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate architecto maxime alias nulla delectus corporis
-                quidem. Aut rem perferendis, ad, ea minima, deleniti iusto dicta
-                illum porro minus assumenda labore.
+                La méthode javascript getElementById() de l'objet Document
+                permet de sélectionner une balise ayant un attribut id (je
+                précise que la valeur de l'id doit être unique dans votre page
+                HTML).
             </p>
             <p class="paragraphe">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                aperiam esse sequi voluptate, hic laboriosam voluptatibus porro,
-                veritatis dolores, beatae tempora aspernatur. Perferendis
-                pariatur excepturi atque porro illum eaque debitis.
+                La méthode javascript getElementsByTagName() de l'objet Document
+                ou Element permet de sélectionner une balise par son nom
+                (tagName).
             </p>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Aperiam suscipit saepe doloremque dolorum, fuga numquam omnis
-                consectetur facere sequi odio dolor odit totam eos quas, fugiat
-                maiores nisi dolores distinctio.
+                La méthode Javascript getElementsByClassName() de l'objet
+                Document ou Element permet de sélectionner une balise par un
+                identifiant de class CSS contenu dans l'attribut HTML (class).
             </p>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -38,11 +36,11 @@
                 voluptatum unde voluptate qui iusto harum dolor ipsam!
             </p>
             <p id="paragraphe">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                officiis amet aliquid! Voluptatibus perferendis accusantium sunt
-                quasi sint, quisquam perspiciatis facere! Magnam temporibus
-                asperiores, in perspiciatis debitis esse tempore quod!
+                La méthode Javascript querySelector() de l'objet Document ou
+                Element permet de sélectionner une balise grâce à un sélecteur
+                CSS.
             </p>
+
         </div>
         <div>
             <h2 class="selector-title">Les selecteurs JavaScript</h2>

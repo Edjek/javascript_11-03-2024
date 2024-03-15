@@ -42,14 +42,58 @@ mainTitle.style.fontSize = '50px';
 const paragrapheWithQuerySelector = document.querySelectorAll('p');
 // console.log(paragrapheWithQuerySelector);
 
-// cibler les element qui ont la class selector-title
-// vous allez appliquez sur tous ces  elements
-// css changez la taille du texte pour le mettre en 35px
-// css le texte soit souligné
-// ajouter une class="title"
-// const selectorTitle = document.getElementsByClassName('selector-title')
-const selectorTitle = document.querySelectorAll('.selector-title')
-selectorTitle.forEach(function(x){
-    x.style.fontSize = '35px'
-    x
-})
+const selectorTitle = document.querySelectorAll('.selector-title');
+selectorTitle.forEach(function (x) {
+    x.style.fontSize = '35px';
+    x.style.textDecoration = 'underline';
+    x.classList.add('title');
+    console.log(x);
+});
+
+/*
+    --------------------------------------------------
+    Quelques propriétés liées aux éléments du DOM
+    --------------------------------------------------
+*/
+
+// La propriété `style` permet de modifier le style
+mainTitle.style.textTransform = 'uppercase';
+
+// La méthode `classList.add()` permet d'ajouter une classe à un élément HTML.
+mainTitle.classList.add('title');
+
+// La méthode `classList.remove()` permet d'ajouter une classe à un élément HTML.
+mainTitle.classList.remove('title');
+
+// La méthode `classList.contains()` permet de vérifier si un élément HTML possède une classe donnée.
+const response = mainTitle.classList.contains('selector-title');
+console.log(response);
+
+// La propriété `textContent` permet de récupérer ou de définir le contenu textuel d'un élément HTML.
+mainTitle.textContent = "<em>C'est pas si dur le Js</em>";
+
+// La propriété `innerHTML` permet de récupérer ou de définir le contenu HTML d'un élément HTML (le HTML est interprété).
+mainTitle.innerHTML = "<em>C'est pas si dur le Js</em>";
+
+// La méthode `setAttribute()` permet de définir la valeur d'un attribut HTML.
+mainTitle.setAttribute('id', 'id-js');
+
+
+// La method `remove()` permet de supprimer un element
+const elementDelete = document.querySelector('#delete')
+elementDelete.remove()
+
+/*
+    -------------------------------------------
+    Créer des elements en Javascript
+    -------------------------------------------
+*/
+const newParagraphe = document.createElement('p')
+newParagraphe.textContent = 'Je suis un paragraphe créé en JS'
+newParagraphe.classList.add('paragraphe')
+
+const mainParagraphe = document.querySelector('#main-paragraphe')
+
+// `append()` ajoute un element à la fin
+// `prepend()` ajoute un element au debut
+mainParagraphe.prepend(newParagraphe)
