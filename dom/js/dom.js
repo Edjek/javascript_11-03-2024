@@ -35,15 +35,15 @@ for (let i = 0; i < paragrapheWithClass.length; i++) {
 }
 
 // ? La method `querySelector()`
-const mainTitle = document.querySelector('h1')
-mainTitle.style.fontSize = '50px'
+const mainTitle = document.querySelector('h1');
+mainTitle.style.fontSize = '50px';
 
 // ? La method `querySelectorAll()`
-const paragrapheWithQuerySelector = document.querySelectorAll('p')
+const paragrapheWithQuerySelector = document.querySelectorAll('p');
 console.log(paragrapheWithQuerySelector);
 
 // cibler les element qui ont la class selector-title
 // vous allez appliquez sur tous ces  elements
-    // css changez la taille du texte pour le mettre en 35px
-    // css le texte soit souligné
-    // ajouter une class="title"
+// css changez la taille du texte pour le mettre en 35px
+// css le texte soit souligné
+// ajouter une class="title"
