@@ -1,0 +1,19 @@
+/* On peut cibler un element HTML par le nom de sa balise */
+p {
+    color: red;
+}
+
+/* On peut cibler un element HTML par son attribut class */
+/* Bien penser à mettre un . devant le nom choisi */
+.paragraphe {
+    color: green;
+    font-style: italic;
+}
+
+/* On peut cibler un element HTML par son attribut id */
+/* Celui-ci doit être unique dans la page HTML */
+/* Bien penser à mettre un # devant le nom choisi */
+/* En CSS on préfère ne pas utiliser ce selecteur */
+#paragraphe {
+    color: blue;
+}

@@ -34,9 +34,9 @@
 // Creer une variable qui contient un message de bienvenue
 // 'Bonjour, je suis une variable qui contient un message de bienvenue'
 // Afficher le message de bienvenue dans la console
-const welcome =
-    'Bonjour, je suis une variable qui contient un message de bienvenue';
-console.log(welcome);
+// const welcome =
+//     'Bonjour, je suis une variable qui contient un message de bienvenue';
+// console.log(welcome);
 
 // Creer une variable qui contient votre prenom
 // Afficher la console le message suivant avec la variable qui contient votre prenom
@@ -84,7 +84,7 @@ const greetintConsoleWithParameter = (nomDeParametreQueJeChoisi) => {
         `Bonjour ${nomDeParametreQueJeChoisi}, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend un parametre`
     );
 };
-// greetintConsoleWithParameter('rachid');
+greetintConsoleWithParameter('rachid');
 
 // Creer une fonction qui affiche un message de bienvenue dans la console et qui prend en parametre un nom et un age
 // 'Bonjour XXXX, vous avez XXXX ans, je suis une fonction qui affiche un message de bienvenue dans la console et qui prend deux parametres'
@@ -246,7 +246,9 @@ const result = (array, firstName) => {
         accept = 'oui';
     }
     const congratulation = mention(average);
-    console.log(`${firstName} a reçu la note de ${average} recu : ${accept}, mention : ${congratulation}`);
+    console.log(
+        `${firstName} a reçu la note de ${average} recu : ${accept}, mention : ${congratulation}`
+    );
 };
 
 result([12, 6, 5], 'rachid');
@@ -558,7 +560,7 @@ students.forEach(function (student) {
 
 // 3. Afficher dans la console le nom et le prénom de chaque élève qui ont ete reçus (utiliser la fonction que vous avez créée dans la partie 5)
 console.log(
-    '--------------------- 4 - ELEVES RECU ---------------------------'
+    '--------------------- 4 - ELEVES RECUS ---------------------------'
 );
 
 students.forEach(function (student) {
@@ -606,19 +608,19 @@ students.forEach(function (student) {
         moyenne += note;
     });
     moyenne /= student.notes.length;
-    // if (moyenne >= 15) {
-    //     console.log(
-    //         `${student.nom} ${student.prenom}, vous obtenez une bourse`
-    //     );
-    // } else if (moyenne >= 10) {
-    //     console.log(
-    //         `${student.nom} ${student.prenom}, vous obtenez votre diplome`
-    //     );
-    // } else if (moyenne <= 10 && moyenne >= 9) {
-    //     console.log(
-    //         `${student.nom} ${student.prenom}, vous allez en rattrapage`
-    //     );
-    // } else {
-    //     console.log(`${student.nom} ${student.prenom}, vous redoublez`);
-    // }
+    if (moyenne >= 15) {
+        console.log(
+            `${student.nom} ${student.prenom}, vous obtenez une bourse`
+        );
+    } else if (moyenne >= 10) {
+        console.log(
+            `${student.nom} ${student.prenom}, vous obtenez votre diplome`
+        );
+    } else if (moyenne <= 10 && moyenne >= 9) {
+        console.log(
+            `${student.nom} ${student.prenom}, vous allez en rattrapage`
+        );
+    } else {
+        console.log(`${student.nom} ${student.prenom}, vous redoublez`);
+    }
 });
