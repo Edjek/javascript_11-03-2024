@@ -40,10 +40,16 @@ mainTitle.style.fontSize = '50px';
 
 // ? La method `querySelectorAll()`
 const paragrapheWithQuerySelector = document.querySelectorAll('p');
-console.log(paragrapheWithQuerySelector);
+// console.log(paragrapheWithQuerySelector);
 
 // cibler les element qui ont la class selector-title
 // vous allez appliquez sur tous ces  elements
 // css changez la taille du texte pour le mettre en 35px
 // css le texte soit souligné
 // ajouter une class="title"
+// const selectorTitle = document.getElementsByClassName('selector-title')
+const selectorTitle = document.querySelectorAll('.selector-title')
+selectorTitle.forEach(function(x){
+    x.style.fontSize = '35px'
+    x
+})
