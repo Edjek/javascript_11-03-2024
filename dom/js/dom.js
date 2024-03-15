@@ -9,7 +9,7 @@
 
 /*
     --------------------------------------------------
-    Methodes de selecteurs JavaScript
+    Méthodes de selecteurs JavaScript
     --------------------------------------------------
 */
 
