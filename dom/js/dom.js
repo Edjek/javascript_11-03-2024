@@ -40,7 +40,9 @@ mainTitle.style.fontSize = '50px';
 
 // ? La method `querySelectorAll()`
 const paragrapheWithQuerySelector = document.querySelectorAll('p');
-// console.log(paragrapheWithQuerySelector);
+for (const paragraphe of paragrapheWithQuerySelector) {
+    paragraphe.style.backgroundColor = 'pink';
+}
 
 const selectorTitle = document.querySelectorAll('.selector-title');
 selectorTitle.forEach(function (x) {
@@ -78,22 +80,21 @@ mainTitle.innerHTML = "<em>C'est pas si dur le Js</em>";
 // La méthode `setAttribute()` permet de définir la valeur d'un attribut HTML.
 mainTitle.setAttribute('id', 'id-js');
 
-
 // La method `remove()` permet de supprimer un element
-const elementDelete = document.querySelector('#delete')
-elementDelete.remove()
+const elementDelete = document.querySelector('#delete');
+elementDelete.remove();
 
 /*
     -------------------------------------------
     Créer des elements en Javascript
     -------------------------------------------
 */
-const newParagraphe = document.createElement('p')
-newParagraphe.textContent = 'Je suis un paragraphe créé en JS'
-newParagraphe.classList.add('paragraphe')
+const newParagraphe = document.createElement('p');
+newParagraphe.textContent = 'Je suis un paragraphe créé en JS';
+newParagraphe.classList.add('paragraphe');
 
-const mainParagraphe = document.querySelector('#main-paragraphe')
+const mainParagraphe = document.querySelector('#main-paragraphe');
 
 // `append()` ajoute un element à la fin
 // `prepend()` ajoute un element au debut
-mainParagraphe.prepend(newParagraphe)
+mainParagraphe.prepend(newParagraphe);
