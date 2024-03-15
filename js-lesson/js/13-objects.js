@@ -64,8 +64,8 @@ for (let key in car) {
     // console.log(car[key]);
 }
 
-const descr = car.description();
-console.log(descr);
+const displayDescription = car.description();
+console.log(displayDescription);
 console.log(car.owner.name);
 console.log(car.year);
 
