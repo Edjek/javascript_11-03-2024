@@ -8,8 +8,16 @@ listMovies.addEventListener('click', function (e) {
     }
 });
 
-// quand on doucle click sur un element de la liste
-// On va creer un h2
-// qui aura pour texte le contenu du li
-// On l'ajoutera en haut
-// On verifiera avant qu'un h2 n'a pas déjà été créé si c'est le cas on le supprime avant d'ajouter le nouveau
+listMovies.addEventListener('dblclick', function (e) {
+    const container = document.querySelector('#container');
+    const titleMovie = document.querySelector('.title');
+
+    if (titleMovie != null) {
+        titleMovie.remove();
+    }
+
+    const title = document.createElement('h2');
+    title.textContent = e.target.textContent;
+    title.classList.add('title');
+    container.prepend(title);
+});
