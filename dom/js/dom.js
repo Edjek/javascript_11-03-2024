@@ -98,3 +98,15 @@ const mainParagraphe = document.querySelector('#main-paragraphe');
 // `append()` ajoute un element à la fin
 // `prepend()` ajoute un element au debut
 mainParagraphe.prepend(newParagraphe);
+
+
+/*
+    -------------------------------------------
+    Les évènements (events) en Javascript
+    -------------------------------------------
+    ? En javascript les évènements permettent d'intéragir avec les actions de l'utilisateur sur une page web, telles que le click, le scroll...
+    -------------------------------------------
+    la méthode addEventListener() permet dedéfinir un écouteur d'évènement sur un élément HTML.
+    Cet écouteur est appelé chaque fois que l'évènement spécifié se produit sur l'élément.
+*/
+
