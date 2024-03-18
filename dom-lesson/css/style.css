@@ -1,12 +1,12 @@
 /* On peut cibler un element HTML par le nom de sa balise */
 p {
-    color: red;
+    color: crimson;
 }
 
 /* On peut cibler un element HTML par son attribut class */
 /* Bien penser à mettre un . devant le nom choisi */
 .paragraphe {
-    color: green;
+    color: seagreen;
     font-style: italic;
 }
 
@@ -15,7 +15,7 @@ p {
 /* Bien penser à mettre un # devant le nom choisi */
 /* En CSS on préfère ne pas utiliser ce selecteur */
 #paragraphe {
-    color: blue;
+    color: cornflowerblue;
 }
 
 .title {

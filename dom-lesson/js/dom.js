@@ -23,7 +23,7 @@ paragraphe.style.fontWeight = 'bold';
 // On ne pourra itérer dessus qu'avec la boucle for(){}
 const titles = document.getElementsByTagName('h2');
 for (let i = 0; i < titles.length; i++) {
-    titles[i].style.color = 'pink';
+    titles[i].style.color = 'salmon';
 }
 
 // ? La method `getElementsByClassname()`
@@ -31,17 +31,19 @@ for (let i = 0; i < titles.length; i++) {
 // On ne pourra itérer dessus qu'avec la boucle for(){}
 const paragrapheWithClass = document.getElementsByClassName('paragraphe');
 for (let i = 0; i < paragrapheWithClass.length; i++) {
-    paragrapheWithClass[i].style.color = 'brown';
+    paragrapheWithClass[i].style.color = 'snow';
 }
 
 // ? La method `querySelector()`
 const mainTitle = document.querySelector('h1');
+mainTitle.style.textAlign = 'center';
 mainTitle.style.fontSize = '50px';
 
 // ? La method `querySelectorAll()`
 const paragrapheWithQuerySelector = document.querySelectorAll('p');
 for (const paragraphe of paragrapheWithQuerySelector) {
     paragraphe.style.backgroundColor = 'pink';
+    paragraphe.style.padding = '20px'
 }
 
 const selectorTitle = document.querySelectorAll('.selector-title');
@@ -49,7 +51,6 @@ selectorTitle.forEach(function (x) {
     x.style.fontSize = '35px';
     x.style.textDecoration = 'underline';
     x.classList.add('title');
-    console.log(x);
 });
 
 /*
@@ -69,7 +70,7 @@ mainTitle.classList.remove('title');
 
 // La méthode `classList.contains()` permet de vérifier si un élément HTML possède une classe donnée.
 const response = mainTitle.classList.contains('selector-title');
-console.log(response);
+// console.log(response);
 
 // La propriété `textContent` permet de récupérer ou de définir le contenu textuel d'un élément HTML.
 mainTitle.textContent = "<em>C'est pas si dur le Js</em>";
@@ -99,7 +100,6 @@ const mainParagraphe = document.querySelector('#main-paragraphe');
 // `prepend()` ajoute un element au debut
 mainParagraphe.prepend(newParagraphe);
 
-
 /*
     -------------------------------------------
     Les évènements (events) en Javascript
@@ -108,12 +108,20 @@ mainParagraphe.prepend(newParagraphe);
     -------------------------------------------
     la méthode addEventListener() permet de définir un écouteur d'évènement sur un élément HTML.
     Cet écouteur est appelé chaque fois que l'évènement spécifié se produit sur l'élément.
+    -------------------------------------------
+    La method addEventListener() prend 2 paramètre :
+    1. Le nom de l'évènement (click, dblclick, mouseover, submit, ...).
+    2. Une fonction callback qui sera appelé à chaque fois que l'évènement est déclenché.
 */
 
-mainTitle.addEventListener('click',function(){
-   const title = document.querySelector('#title-js')
-   title.remove()
-})
+mainTitle.addEventListener('click', function () {
+    //    const title = document.querySelector('#title-js')
+    //    title.remove()
+});
 
-// quand double click sur le h1
-    // creer un p 'je suis un paragraphe creer lors du click du h1 en bas de la liste des paragraphe
+mainTitle.addEventListener('dblclick', function () {
+    const paragraphe = document.createElement('p');
+    paragraphe.textContent = 'je suis un paragraphe creer lors du click du h1';
+
+    mainParagraphe.append(paragraphe);
+});
