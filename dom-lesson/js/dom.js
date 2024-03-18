@@ -43,7 +43,7 @@ mainTitle.style.fontSize = '50px';
 const paragrapheWithQuerySelector = document.querySelectorAll('p');
 for (const paragraphe of paragrapheWithQuerySelector) {
     paragraphe.style.backgroundColor = 'pink';
-    paragraphe.style.padding = '20px'
+    paragraphe.style.padding = '20px';
 }
 
 const selectorTitle = document.querySelectorAll('.selector-title');
@@ -124,4 +124,12 @@ mainTitle.addEventListener('dblclick', function () {
     paragraphe.textContent = 'je suis un paragraphe creer lors du click du h1';
 
     mainParagraphe.append(paragraphe);
+});
+
+const listSelector = document.querySelector('#list-selector');
+
+// `addEventListener()` permet de récuperer l'objet event grâce auquel on pourra manipuler ses propriétés
+listSelector.addEventListener('click', function (e) {
+    console.log(e.target.textContent);
+    e.target.style.backgroundColor = ' pink';
 });
