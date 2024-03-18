@@ -106,7 +106,14 @@ mainParagraphe.prepend(newParagraphe);
     -------------------------------------------
     ? En javascript les évènements permettent d'intéragir avec les actions de l'utilisateur sur une page web, telles que le click, le scroll...
     -------------------------------------------
-    la méthode addEventListener() permet dedéfinir un écouteur d'évènement sur un élément HTML.
+    la méthode addEventListener() permet de définir un écouteur d'évènement sur un élément HTML.
     Cet écouteur est appelé chaque fois que l'évènement spécifié se produit sur l'élément.
 */
 
+mainTitle.addEventListener('click',function(){
+   const title = document.querySelector('#title-js')
+   title.remove()
+})
+
+// quand double click sur le h1
+    // creer un p 'je suis un paragraphe creer lors du click du h1 en bas de la liste des paragraphe
