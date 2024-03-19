@@ -1,5 +1,5 @@
 // Pour rendre exportable une fonction ou une variable, il faut ajouter export devant.
- export function setMessageError(element, message) {
+export function setMessageError(element, message) {
     const errorMessage = document.createElement('p');
     errorMessage.textContent = message;
     errorMessage.classList.add('message-error');

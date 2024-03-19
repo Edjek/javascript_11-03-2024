@@ -32,15 +32,15 @@ function checkValidity() {
         setMessageError(emailField, 'Email invalide.');
     } else if (pswdField.value == '') {
         setMessageError(pswdField, 'Veuillez indiquez votre mot de passe.');
+    } else if (checkPswdValidity(pswdField.value) === false) {
+        setMessageError(
+            pswdField,
+            'Le mot de passe doit contenir au mois 8 caractères dont 1 majuscule, 1, chiffre et 1 caractère spécial'
+        );
     } else if (confirmPswdField.value == '') {
         setMessageError(
             confirmPswdField,
             'Veuillez confirmer votre mot de passe'
-        );
-    } else if (checkPswdValidity(pswdField.value === false)) {
-        setMessageError(
-            pswdField,
-            'Le mot de passe doit contenir au mois 8 caractères dont 1 majuscule, 1, chiffre et 1 caractère spécial'
         );
     } else if (pswdField.value !== confirmPswdField.value) {
         setMessageError(
@@ -56,11 +56,11 @@ function checkValidity() {
 
 // Creer une fonction checkEmailValidity prend en parametre un element html
 function checkEmailValidity(email) {
-    return /^[a-z.-_]+@[a-zA-Z.-_]+.[a-zA-Z]{2,4}$/.test(email);
+    return /^[a-zA-Z0-9.-_+%]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/.test(email);
 }
 
 function checkPswdValidity(pswd) {
-    return /^(?=.*[A-Z])(?=.*[!@#$%^&*()-_+=])(?=.*[0-9])[a-zA-Z0-9!@#$%^&*()-_+=]{8,}$/.test(
+    return /^(?=.*[A-Z])(?=.*[!@#$%^&*()-_+=])(?=.*[0-9])[a-zA-Z-Z0-9!@#$%^&*()-_+=;]{8,}$/.test(
         pswd
     );
 }
