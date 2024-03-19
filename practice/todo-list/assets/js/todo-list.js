@@ -1,13 +1,15 @@
-//  Quand on clique sur ajouter un nouvelle element s'ajoute a la liste avec le texte qui a été tapé dans l'input
 const submit = document.querySelector('#btn');
 const list = document.querySelector('#todo-list');
 
+// corriger la creation d'element vide
 submit.addEventListener('click', function () {
     const input = document.querySelector('#input');
 
-    const item = document.createElement('li');
-    item.textContent = input.value;
-    list.prepend(item);
+    if (input.value != '') {
+        const item = document.createElement('li');
+        item.textContent = input.value;
+        list.prepend(item);
+    }
 });
 
 list.addEventListener('click', function (e) {
