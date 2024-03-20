@@ -34,3 +34,14 @@ h1 {
     -o-object-fit: cover;
     object-fit: cover;
 }
+
+.card-hero {
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+.card-hero h2 {
+    margin-bottom: 30px;
+}
