@@ -40,25 +40,28 @@ fetch('/js/data.json')
     .then((data) => {
         // console.log(data);
     })
-    .catch((error)=>{
-        console.log(`une erreur s'est produite: ${error}`)
-    })
+    .catch((error) => {
+        console.log(`une erreur s'est produite: ${error}`);
+    });
 
 fetch('https://jsonplaceholder.typicode.com/users')
     .then((response) => {
         return response.json();
     })
     .then((users) => {
-        for(let user of users){
-            const {username, address: {street, city, zipcode}} = user
-            
+        for (let user of users) {
+            const {
+                username,
+                address: { street, city, zipcode },
+            } = user;
+
             console.log(`${username}  habite au ${street} ${city} ${zipcode}`);
         }
     })
-    .catch((error)=>{
-        console.log(`une erreur s'est produite: ${error}`)
-    })
+    .catch((error) => {
+        console.log(`une erreur s'est produite: ${error}`);
+    });
 
-    // Creer une requete fetch avec le lien fourni
-    // destructure les objets PRENOM, RUE, VILLE, CODE, POSTAL
-    // et vous affichez pour chacun des utilisateur 'PRENOM  habite au RUE VILLE CODE POSTAL
+// Creer une requete fetch avec le lien fourni
+// destructure les objets PRENOM, RUE, VILLE, CODE, POSTAL
+// et vous affichez pour chacun des utilisateur 'PRENOM  habite au RUE VILLE CODE POSTAL
