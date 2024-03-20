@@ -1,8 +1,7 @@
 /* --------------------------- DESTRUCTURING --------------------------- */
 
 /*
-    La Destructuration (destructuring) d'un tableau ou un objet signifie extraire des valeurs dans des variables distinctes.
-
+    ? La Destructuration (destructuring) d'un tableau ou un objet signifie extraire des valeurs dans des variables distinctes.
     On peut même les renommer si une variable du même nom que la propriété existe déjà.
 */
 const avenger = {
@@ -19,7 +18,7 @@ const avenger = {
     },
 };
 
-// Destructuration de l'objet avenger
+// * Destructuration de l'objet avenger
 const {
     name: newName,
     realname,
@@ -42,25 +41,6 @@ console.log(newFruit);
 // destructurer le tableau fruit pour recuperer uniquement la 4ieme valeur
 const [, , , fraise] = fruits;
 console.log(fraise);
-
-// Destructurer un objet Pikachu
-const pokemon = {
-    name: 'pikachu',
-    type: 'electric',
-    level: 25,
-    trainer: {
-        name: 'Sacha',
-        city: 'paris',
-    },
-    bonus: [35, 67, 90],
-};
-
-const {
-    name,
-    trainer: { name: nameTrainer },
-    bonus: [, , lastBonus],
-} = pokemon;
-console.log(name, nameTrainer, lastBonus);
 
 // Exercice
 const avengers = [
@@ -97,40 +77,74 @@ const avengers = [
         isAlive: false,
     },
 ];
+const displayAvengers = document.querySelector('#display-avenger');
 
-for (let avenger of avengers) {
-    const {
-        isAlive,
-        alias,
-        powers: [power1, power2],
-        team,
-    } = avenger;
-
-    if (isAlive === true) {
-        const card = document.createElement('div');
-        card.classList.add('card-hero')
-
-        const title = document.createElement('h2');
-        title.textContent = alias;
-        card.append(title);
-
-        const listPower = document.createElement('ul');
-
-        const listItem = document.createElement('li');
-        listItem.textContent = power1;
-        const listItem2 = document.createElement('li');
-        listItem2.textContent = power2;
-        listPower.append(listItem);
-        listPower.append(listItem2);
-
-        card.append(listPower);
-
-        const cardContent = document.createElement('p');
-        cardContent.textContent = `je fais parti de l'equipe ${team}`;
-
-        card.append(cardContent);
-
-        const container = document.querySelector('#container')
-        container.append(card)
+displayAvengers.addEventListener('click', function () {
+    const cardsAvengers = document.querySelectorAll('.card-hero');
+    for (let cardAvenger of cardsAvengers) {
+        cardAvenger.remove();
     }
+
+    for (let avenger of avengers) {
+        const {
+            isAlive,
+            alias,
+            powers: [power1, power2],
+            team,
+        } = avenger;
+        if (isAlive === true) {
+            const card = document.createElement('div');
+            card.classList.add('card-hero');
+
+            const title = document.createElement('h2');
+            title.textContent = alias;
+            card.append(title);
+
+            const listPower = document.createElement('ul');
+
+            const listItem = document.createElement('li');
+            listItem.textContent = power1;
+            const listItem2 = document.createElement('li');
+            listItem2.textContent = power2;
+            listPower.append(listItem);
+            listPower.append(listItem2);
+
+            card.append(listPower);
+
+            const cardContent = document.createElement('p');
+            cardContent.textContent = `je fais parti de l'equipe ${team}`;
+
+            card.append(cardContent);
+
+            const container = document.querySelector('#container');
+            container.append(card);
+        }
+    }
+});
+
+// Destructurer un objet Pikachu
+const pokemon = {
+    name: 'pikachu',
+    type: 'electric',
+    level: 25,
+    trainer: {
+        name: 'Sacha',
+        city: 'paris',
+    },
+    bonus: [35, 67, 90],
+};
+
+const {
+    name,
+    trainer: { name: nameTrainer },
+    bonus: [, , lastBonus],
+} = pokemon;
+
+console.log(name, nameTrainer, lastBonus);
+
+function display(objet) {
+    const { name, type } = objet;
+    console.log(name, type);
 }
+
+display(pokemon);
