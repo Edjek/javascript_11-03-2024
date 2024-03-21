@@ -1,9 +1,11 @@
 /*
+    ? RENOMMER le Dossier par NOM_Prenom avant de commencer, une fois fini zipper le projet et me l'envoyer en privé sur Discord
+
     Description: Javascript Practice
     Language: JavaScript
-    Created: 2024-03-19
+    Created: 2024-03-21
     By: @edjek
-    Lisez les instructions ci-dessous et écrivez votre code dans le fichier main.js
+    * Lisez les instructions ci-dessous et écrivez votre code dans le fichier main.js
     Vous pouvez tester votre code en ouvrant le fichier index.html dans votre navigateur
     Vous pouvez voir les résultats de votre code dans la console de votre navigateur
 */
@@ -15,13 +17,14 @@
 //   | | -       | |
 //   | |         | |
 //   | |_________| |________________________
-//   \=____________/   edjekouane rachid     )
-//   / """"""""""" \                       /
-//  / ::::::::::::: \                  =D-'
+//   \=____________/   EDJEKOUANE Rachid     )
+//   / """"""""""" \                        /
+//  / ::::::::::::: \                   =D-'
 // (_________________)
 
 // ----------------------------------- The 100 -----------------------------------
-let serie = {
+
+const serie = {
     nom: 'The 100',
     nbrSaison: 7,
     nbrEpisode: 100,
@@ -44,36 +47,42 @@ let serie = {
 // Destructurez les propriétés suivantes: nom, nbrSaison, genres et acteur principal
 
 // ---------------------------------- Exercice 1 ----------------------------------
+
 // Créez une fonction qui prend un tableau et affiche chaque élément.
 
 // Affichez les genres de la série en utilisant la fonction créée
 
 // ---------------------------------- Exercice 2 ----------------------------------
+
 // Créez une fonction qui prend un tableau et renvoie la moyenne de tous les éléments.
 
 // Affichez la moyenne des notes de la série en utilisant la fonction créée
 
 // ---------------------------------- Exercice 3 ----------------------------------
+
 // Créez une fonction qui prend un tableau si la moyenne est supérieure à 3, affichez 'La série est bonne', sinon affichez 'La série est mauvaise'.
-// Utilisez la fonction créée precedemment pour calculer la moyenne des notes de la série.
 
 // Affichez si la série est bonne ou mauvaise en utilisant la fonction créée
 
 // ---------------------------------- Exercice 4 ----------------------------------
+
 // Créez une fonction qui prend un tableau de nombres et renvoie le nombre le plus grand.
 
 // Affichez la note la plus grande de la série en utilisant la fonction créée
 
 // ---------------------------------- Exercice 5 ----------------------------------
+
 // Créez une fonction qui prend un tableau de nombres et renvoie le nombre le plus petit.
 
 // Affichez la note la plus petite de la série en utilisant la fonction créée
 
 // ---------------------------------- Exercice 6 ----------------------------------
-// Creer un objet avec les propriétés suivantes:
+
+// Créez un objet avec les propriétés suivantes:
 // nom: 'John'
 // age: 30
 // ville: 'New York'
+// salary: 3800
 // prime: tableau avec les valeurs suivantes: 1890, 2890, 3700
 // job: objet avec les propriétés suivantes:
 //     titre: 'Développeur Web'
@@ -84,20 +93,24 @@ let serie = {
 // nom, age, ville, prime , titre, entreprise, description
 
 // ---------------------------------- Exercice 7 ----------------------------------
+
 // Faites une requête AJAX pour récupérer les données de l'API suivante: 'https://api.kanye.rest/'
-// Créez un paragraphe et affichez la citation de Kanye West dans le paragraphe.
+// Créez un paragraphe avec la class message-request et affichez la citation de Kanye West dans le bas de la section #container.
 
 // ---------------------------------- Exercice 8 ----------------------------------
+
 // Faites une requête AJAX pour récupérer les données de l'API suivante: 'https://api.chucknorris.io/jokes/random'
-// Creez un paragraphe et affichez la blague de Chuck Norris dans le paragraphe.
+// Creez un paragraphe avec la class message-request et affichez la blague de Chuck Norris dans le bas de la section #container.
 
 // ---------------------------------- Exercice 9 ----------------------------------
-// Faites une requête AJAX pour récupérer les données de l'API suivante: 'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1'
-// Creez un paragraphe et affichez le resultat de la requete
+
+// Faites une requête AJAX pour récupérer les données de l'API suivante: 'https://poetrydb.org/author'
+// Affichez le nombre d'auteurs présent et affichez le nom du premier
 
 /* ----------------------------------------------------------- */
-/*                  Tableau d'objets Avengers                  */
+/*                  Tableau d'Objets Avengers                  */
 /* ----------------------------------------------------------- */
+
 const avengers = [
     {
         nom: 'Iron Man',
@@ -367,83 +380,95 @@ const avengers = [
 ];
 
 // ---------------------------------- Exercice 10 ----------------------------------
+
 // Affichez la liste des films dans lesquels chaque super-héros est apparu.
-// Affichez: Nom: alias est apparu dans les films suivants: films
+// Affichez: 'Nom: alias est apparu dans les films suivants: films'
 console.log(
     '------------------------- Films dans lesquels chaque super-héros est apparu: -------------------------'
 );
 
 // ---------------------------------- Exercice 11 ----------------------------------
+
 // Affichez la liste des super-héros qui ont des capacités de vol.
-// Affichez: Nom: alias peut voler
+// Affichez: 'Nom: alias peut voler'
 console.log(
     '------------------------- Avengers qui peuvent voler: -------------------------'
 );
 
 // ---------------------------------- Exercice 12 ----------------------------------
+
 // Affichez la liste des super-héros qui ont des capacités de télékinésie.
-// Affichez: Nom: alias a des capacités de télékinésie
+// Affichez: 'Nom: alias a des capacités de télékinésie'
 console.log(
     '------------------------- Avengers avec des capacités de télékinésie: -------------------------'
 );
 
 // ---------------------------------- Exercice 13 ----------------------------------
+
 // Affichez la liste des super-héros qui n'ont pas d'équipement.
-// Affichez: Nom: alias n'a pas d'équipement
+// Affichez: 'Nom: alias n'a pas d'équipement'
 console.log(
     '------------------------- Avengers sans équipement: -------------------------'
 );
 
 // ---------------------------------- Exercice 14 ----------------------------------
+
 // Affichez la liste des super-héros qui ont joué dans plus de 5 films.
-// Affichez: Nom: alias a joué dans plus de 5 films
+// Affichez: 'Nom: alias a joué dans plus de 5 films'
 console.log(
     '------------------------- Avengers qui ont joué dans plus de 5 films: -------------------------'
 );
 
 // ---------------------------------- Exercice 15 ----------------------------------
+
 // Pour chaque super-héros, destructurer les propriétés suivantes: alias, description, capacites, films.
-// Affichez : Nom: alias, Description: description, Capacités: capacites, Films: films
+// Affichez : 'Nom: alias, Description: description, Films: films'
 console.log(
     '------------------------- Destructuration des propriétés suivantes: -------------------------'
 );
 
 // ---------------------------------- Exercice 16 ----------------------------------
+
 // Créez une fonction qui prend un tableau de super-héros et renvoie un tableau de super-héros qui ont des capacités de vol.
 
 console.log(
     '------------------------- Super-héros avec des capacités de vol: -------------------------'
 );
+
 // Affichez la liste des super-héros qui ont des capacités de vol en utilisant la fonction créée
+// Affichez : 'Nom: alias peut voler'
 
 // ---------------------------------- Exercice 17 ----------------------------------
+
 // Utilisez la fonction créée dans l'exercice 16 pour afficher la liste des super-héros qui ont des capacités de vol dans une div HTML qui aura la classe super-hero
 // Le nom de chaque super-héros doit être dans une balise h2.
 // La description de chaque super-héros doit être dans une balise p.
 // La liste des films de chaque super-héros doit être dans une balise ul.
 // Chaque film doit être dans une balise li.
 
-console.log(
-    '------------------------- Liste des super-héros avec des capacités de vol: -------------------------'
-);
-
 // ---------------------------------- Exercice 18 ----------------------------------
+
 // Créez une fonction qui prend un tableau de super-héros et renvoie un tableau de super-héros qui ont joué dans plus de 5 films.
 // Utilisez la fonction pour afficher la liste des super-héros qui ont joué dans plus de 5 films dans une div HTML qui aura la classe super-hero
 // Le nom de chaque super-héros doit être dans une balise h2.
 // La description de chaque super-héros doit être dans une balise p.
 // La liste des films de chaque super-héros doit être dans une balise ul.
 
-console.log(
-    '------------------------- Super-héros qui ont joué dans plus de 5 films: -------------------------'
-);
-
 // ---------------------------------- Exercice 19 ----------------------------------
+
 // Créez une fonction qui calcule la moyenne du nombre de films dans lesquels chaque super-héros a joué.
 
 console.log(
     '------------------------- Moyenne du nombre de films dans lesquels chaque super-héros a joué: -------------------------'
 );
 
+// Afficher : 'la moyenne du nombre de films dans lequel a joué un super héro est de :'
+
 // ---------------------------------- Exercice 20 ----------------------------------
-// Ajoutez une alert qui affiche 'Exercices Javascript fini' en bas de la page, lorsque le scroll sur la page atteint plus de 300px
+
+// Ajoutez une alert qui affiche 'Exercices Javascript fini' en bas de la page, lorsque le scroll sur la page atteint plus de 800px
+// window.addEventListener('scroll', function () {
+//     if (window.scrollY > 800) {
+//         alert('coucou');
+//     }
+// });

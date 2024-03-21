@@ -11,19 +11,22 @@ body {
 }
 
 h1 {
+    margin: 40px 0 80px;
+    font-size: 45px;
     text-align: center;
     text-transform: uppercase;
-    margin: 30px 0 50px 0;
+}
+
+section {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .container {
-    width: 80%;
-    max-width: 800px;
-    margin: auto;
+    text-align: center;
 }
 
 .container p {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .container .gif {
@@ -37,8 +40,14 @@ h1 {
     object-fit: cover;
 }
 
+.message-request {
+    margin: 30px;
+    color: rgb(90, 135, 199);
+    font-style: italic;
+}
+
 .super-hero {
-    width: 600px;
+    width: 500px;
     margin: 50px auto;
     padding: 30px;
     border-radius: 10px;
@@ -47,10 +56,15 @@ h1 {
 
 .super-hero h2 {
     margin-bottom: 30px;
+    font-size: 35px;
     text-align: center;
 }
 
 .super-hero p {
-    font-style: italic;
     margin-bottom: 20px;
+    font-style: italic;
+}
+
+.super-hero ul {
+    list-style: square;
 }
