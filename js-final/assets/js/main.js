@@ -1,5 +1,5 @@
 /*
-    ? RENOMMER le Dossier par NOM_Prenom avant de commencer, une fois fini zipper le projet et me l'envoyer en privé sur Discord
+    ? RENOMMER le Dossier par NOM_Prenom avant de commencer
 
     Description: Javascript Practice
     Language: JavaScript
