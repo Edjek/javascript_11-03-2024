@@ -6,6 +6,7 @@
     Created: 2024-03-21
     By: @edjek
     * Lisez les instructions ci-dessous et écrivez votre code dans le fichier main.js
+    * La correction se trouvera dans le fichier correction.js
     Vous pouvez tester votre code en ouvrant le fichier index.html dans votre navigateur
     Vous pouvez voir les résultats de votre code dans la console de votre navigateur
 */
