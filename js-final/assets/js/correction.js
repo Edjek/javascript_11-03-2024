@@ -1,12 +1,11 @@
 /*
-    ? RENOMMER le Dossier par NOM_Prenom avant de commencer, une fois fini zipper le projet et me l'envoyer en privé sur Discord
+    ? RENOMMER le dossier par NOM_Prenom avant de commencer
 
     Description: Javascript Practice
     Language: JavaScript
     Created: 2024-03-21
     By: @edjek
     * Lisez les instructions ci-dessous et écrivez votre code dans le fichier main.js
-    * La correction se trouvera dans le fichier correction.js
     Vous pouvez tester votre code en ouvrant le fichier index.html dans votre navigateur
     Vous pouvez voir les résultats de votre code dans la console de votre navigateur
 */
@@ -40,42 +39,94 @@ const serie = {
 // ---------------------------------- Exercice 0 ----------------------------------
 
 // Affichez le nom de la série
+console.log(serie.nom);
 
 // Affichez le nombre de saisons de la série
+console.log(serie.nbrSaison);
 
 // Affichez le nom de l'acteur principal
+console.log(serie.acteurs.principal);
 
 // Destructurez les propriétés suivantes: nom, nbrSaison, genres et acteur principal
+const {
+    nom,
+    nbrSaison,
+    genres,
+    acteurs: { principal },
+} = serie;
 
 // ---------------------------------- Exercice 1 ----------------------------------
 
 // Créez une fonction qui prend un tableau et affiche chaque élément.
+function displayArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+    }
+}
 
 // Affichez les genres de la série en utilisant la fonction créée
+displayArray(genres);
 
 // ---------------------------------- Exercice 2 ----------------------------------
 
 // Créez une fonction qui prend un tableau et renvoie la moyenne de tous les éléments.
+function averageArray(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    return sum / array.length;
+}
 
 // Affichez la moyenne des notes de la série en utilisant la fonction créée
+console.log(averageArray(serie.listNote));
 
 // ---------------------------------- Exercice 3 ----------------------------------
 
 // Créez une fonction qui prend un tableau si la moyenne est supérieure à 3, affichez 'La série est bonne', sinon affichez 'La série est mauvaise'.
+function checkSerie(array) {
+    const average = averageArray(array);
+    if (array > 3) {
+        console.log('La série est bonne');
+    } else {
+        console.log('la serie est mauvaise');
+    }
+}
 
 // Affichez si la série est bonne ou mauvaise en utilisant la fonction créée
+checkSerie(serie.listNote);
 
 // ---------------------------------- Exercice 4 ----------------------------------
 
 // Créez une fonction qui prend un tableau de nombres et renvoie le nombre le plus grand.
+function maxNumber(array) {
+    let max = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
+    }
+    return max;
+}
 
 // Affichez la note la plus grande de la série en utilisant la fonction créée
+console.log(maxNumber(serie.listNote));
 
 // ---------------------------------- Exercice 5 ----------------------------------
 
 // Créez une fonction qui prend un tableau de nombres et renvoie le nombre le plus petit.
+function minNumber(array) {
+    let min = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < min) {
+            min = array[i];
+        }
+    }
+    return min;
+}
 
 // Affichez la note la plus petite de la série en utilisant la fonction créée
+console.log(minNumber(serie.listNote));
 
 // ---------------------------------- Exercice 6 ----------------------------------
 
@@ -89,24 +140,86 @@ const serie = {
 //     titre: 'Développeur Web'
 //     entreprise: 'Google'
 // description: fonction qui retourne 'John est un développeur Web de 30 ans vivant à New York. Il travaille chez Google et gagne 3800 euros par mois.'
+const person = {
+    nom: 'John',
+    age: 30,
+    ville: 'New York',
+    prime: [1890, 2890, 3700],
+    salary: 3800,
+    job: { jobTitle: 'Développeur Web', entreprise: 'Google' },
+    description: function () {
+        return `${this.nom} est un ${this.job.jobTitle} de ${this.age} ans vivant à ${this.ville}. Il travaille chez ${this.job.entreprise} et gagne ${this.salary} euros par mois.`;
+    },
+};
 
 // Destructurez les propriétés suivantes :
 // nom, age, ville, prime , titre, entreprise, description
+const {
+    nom: firstName,
+    age,
+    ville,
+    prime: [prime1, prime2, prime3],
+    job: { jobTitle, entreprise },
+    description,
+} = person;
 
 // ---------------------------------- Exercice 7 ----------------------------------
 
 // Faites une requête AJAX pour récupérer les données de l'API suivante: 'https://api.kanye.rest/'
 // Créez un paragraphe avec la class message-request et affichez la citation de Kanye West dans le bas de la section #container.
+fetch('https://api.kanye.rest/')
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        const body = document.querySelector('#container');
+
+        const quote = document.createElement('p');
+        quote.classList.add('message-request');
+        quote.textContent = data.quote;
+
+        body.append(quote);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 
 // ---------------------------------- Exercice 8 ----------------------------------
 
 // Faites une requête AJAX pour récupérer les données de l'API suivante: 'https://api.chucknorris.io/jokes/random'
 // Creez un paragraphe avec la class message-request et affichez la blague de Chuck Norris dans le bas de la section #container.
+fetch('https://api.chucknorris.io/jokes/random')
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        const body = document.querySelector('#container');
+
+        const joke = document.createElement('p');
+        joke.classList.add('message-request');
+        joke.textContent = data.value;
+
+        body.append(joke);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 
 // ---------------------------------- Exercice 9 ----------------------------------
 
 // Faites une requête AJAX pour récupérer les données de l'API suivante: 'https://poetrydb.org/author'
 // Affichez le nombre d'auteurs présent et affichez le nom du premier
+fetch(' https://poetrydb.org/author')
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data.authors.length);
+        console.log(data.authors[0]);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 
 /* ----------------------------------------------------------- */
 /*                  Tableau d'Objets Avengers                  */
@@ -388,6 +501,14 @@ console.log(
     '------------------------- Films dans lesquels chaque super-héros est apparu: -------------------------'
 );
 
+for (const avenger of avengers) {
+    console.log(
+        `Nom: ${
+            avenger.alias
+        } est apparu dans les films suivants: ${avenger.films.join(', ')}`
+    );
+}
+
 // ---------------------------------- Exercice 11 ----------------------------------
 
 // Affichez la liste des super-héros qui ont des capacités de vol.
@@ -395,6 +516,12 @@ console.log(
 console.log(
     '------------------------- Avengers qui peuvent voler: -------------------------'
 );
+
+for (const avenger of avengers) {
+    if (avenger.capacites.vol) {
+        console.log(`Nom: ${avenger.alias} peut voler`);
+    }
+}
 
 // ---------------------------------- Exercice 12 ----------------------------------
 
@@ -404,6 +531,12 @@ console.log(
     '------------------------- Avengers avec des capacités de télékinésie: -------------------------'
 );
 
+for (const avenger of avengers) {
+    if (avenger.capacites.telekinesie) {
+        console.log(`Nom: ${avenger.alias} a des capacités de télékinésie`);
+    }
+}
+
 // ---------------------------------- Exercice 13 ----------------------------------
 
 // Affichez la liste des super-héros qui n'ont pas d'équipement.
@@ -411,6 +544,12 @@ console.log(
 console.log(
     '------------------------- Avengers sans équipement: -------------------------'
 );
+
+for (const avenger of avengers) {
+    if (avenger.equipement == null) {
+        console.log(`Nom: ${avenger.alias} n'a pas d'équipement`);
+    }
+}
 
 // ---------------------------------- Exercice 14 ----------------------------------
 
@@ -420,6 +559,12 @@ console.log(
     '------------------------- Avengers qui ont joué dans plus de 5 films: -------------------------'
 );
 
+for (const avenger of avengers) {
+    if (avenger.films.length > 5) {
+        console.log(`Nom: ${avenger.alias} a joué dans plus de 5 films`);
+    }
+}
+
 // ---------------------------------- Exercice 15 ----------------------------------
 
 // Pour chaque super-héros, destructurer les propriétés suivantes: alias, description, capacites, films.
@@ -428,9 +573,25 @@ console.log(
     '------------------------- Destructuration des propriétés suivantes: -------------------------'
 );
 
+for (const avenger of avengers) {
+    const { alias, description, capacites, films } = avenger;
+    console.log(
+        `Nom: ${alias}, Description: ${description}, Capacités: ${capacites}, Films: ${films}`
+    );
+}
+
 // ---------------------------------- Exercice 16 ----------------------------------
 
 // Créez une fonction qui prend un tableau de super-héros et renvoie un tableau de super-héros qui ont des capacités de vol.
+function superHerosVol(array) {
+    let superhero = [];
+    for (const avenger of array) {
+        if (avenger.capacites.vol) {
+            superhero.push(avenger);
+        }
+    }
+    return superhero;
+}
 
 console.log(
     '------------------------- Super-héros avec des capacités de vol: -------------------------'
@@ -438,6 +599,10 @@ console.log(
 
 // Affichez la liste des super-héros qui ont des capacités de vol en utilisant la fonction créée
 // Affichez : 'Nom: alias peut voler'
+const superHeros = superHerosVol(avengers);
+for (const avenger of superHeros) {
+    console.log(`${avenger.alias} peut voler`);
+}
 
 // ---------------------------------- Exercice 17 ----------------------------------
 
@@ -446,6 +611,32 @@ console.log(
 // La description de chaque super-héros doit être dans une balise p.
 // La liste des films de chaque super-héros doit être dans une balise ul.
 // Chaque film doit être dans une balise li.
+const superHerosList = document.querySelector('#super-heros-list');
+
+for (const avenger of superHeros) {
+    const superHero = document.createElement('div');
+    superHero.classList.add('super-hero');
+
+    const superHeroTitle = document.createElement('h2');
+    superHeroTitle.textContent = avenger.nom;
+    superHero.append(superHeroTitle);
+
+    const superHeroDescription = document.createElement('p');
+    superHeroDescription.textContent = avenger.description;
+    superHero.append(superHeroDescription);
+
+    const filmsList = document.createElement('ul');
+
+    for (let film of avenger.films) {
+        const filmItem = document.createElement('li');
+        filmItem.textContent = film;
+        filmsList.append(filmItem);
+    }
+
+    superHero.append(filmsList);
+
+    superHerosList.append(superHero);
+}
 
 // ---------------------------------- Exercice 18 ----------------------------------
 
@@ -454,16 +645,66 @@ console.log(
 // Le nom de chaque super-héros doit être dans une balise h2.
 // La description de chaque super-héros doit être dans une balise p.
 // La liste des films de chaque super-héros doit être dans une balise ul.
+function superHerosPlayMore5Movies(array) {
+    let superHeros = [];
+    for (const avenger of array) {
+        if (avenger.films.length > 5) {
+            superHeros.push(avenger);
+        }
+    }
+    return superHeros;
+}
+
+const superHeros5Films = superHerosPlayMore5Movies(avengers);
+
+let superHeros5FilmsList = document.querySelector('#super-heros-5-films-list');
+for (const avenger of superHeros5Films) {
+    const superHero = document.createElement('div');
+    superHero.classList.add('super-hero');
+
+    const superHeroTitle = document.createElement('h2');
+    superHeroTitle.textContent = avenger.nom;
+    superHero.append(superHeroTitle);
+
+    const superHeroDescription = document.createElement('p');
+    superHeroDescription.textContent = avenger.description;
+    superHero.append(superHeroDescription);
+
+    const filmsList = document.createElement('ul');
+
+    for (const film of avenger.films) {
+        const filmItem = document.createElement('li');
+        filmItem.textContent = film;
+        filmsList.append(filmItem);
+    }
+
+    superHero.append(filmsList);
+
+    superHeros5FilmsList.append(superHero);
+}
 
 // ---------------------------------- Exercice 19 ----------------------------------
 
 // Créez une fonction qui calcule la moyenne du nombre de films dans lesquels chaque super-héros a joué.
+function averageMovies(array) {
+    let totalMovies = 0;
+    for (const avenger of array) {
+        totalMovies += avenger.films.length;
+    }
+    return totalMovies / array.length;
+}
 
 console.log(
     '------------------------- Moyenne du nombre de films dans lesquels chaque super-héros a joué: -------------------------'
 );
 
 // Afficher : 'la moyenne du nombre de films dans lequel a joué un super héro est de :'
+let average = averageMovies(avengers);
+average = average.toFixed(2);
+
+console.log(
+    `la moyenne du nombre de films dans lequel a joué un super héro est de : ${average}`
+);
 
 // ---------------------------------- Exercice 20 ----------------------------------
 
