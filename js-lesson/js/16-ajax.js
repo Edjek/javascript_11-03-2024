@@ -19,12 +19,12 @@ console.log('salut');
 // On créer objet de type XMLHttpRequest()
 const xhr = new XMLHttpRequest();
 
-xhr.open('get', '/js/data.json');
+xhr.open('get', './js/data.json');
 
 xhr.onload = function () {
     if (xhr.status >= 200 && xhr.status < 300) {
         const data = JSON.parse(xhr.response);
-        // console.log(data);
+        console.log(data);
     } else if (xhr.status >= 400 && xhr.status < 600) {
         console.log('Vous avez une erreur');
     }
@@ -38,7 +38,7 @@ fetch('/js/data.json')
         return response.json();
     })
     .then((data) => {
-        // console.log(data);
+        console.log(data);
     })
     .catch((error) => {
         console.log(`une erreur s'est produite: ${error}`);
